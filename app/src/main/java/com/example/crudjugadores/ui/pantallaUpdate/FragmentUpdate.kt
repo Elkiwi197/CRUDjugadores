@@ -43,10 +43,10 @@ class FragmentUpdate : Fragment() {
 
     private fun creareventos() {
         with(binding) {
-            botonAdd.setOnClickListener {
+            botonUpdate.setOnClickListener {
                 viewModel.handleEvent(FragmentUpdateEvento.UpdateJugador(crearJugador()))
             }
-            buttonDelete.setOnClickListener {
+            botonDelete.setOnClickListener {
                 viewModel.handleEvent(FragmentUpdateEvento.DeleteJugador(args.idJugador))
             }
             seekBarEdad.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
