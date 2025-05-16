@@ -1,0 +1,105 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pantallaUpdate.FragmentUpdate">
+
+    <!-- NOMBRE -->
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@id/editTextEquipo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- EQUIPO -->
+    <EditText
+        android:id="@+id/editTextEquipo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/equipo"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@id/editTextPosicion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextNombre" />
+
+    <!-- POSICION -->
+    <EditText
+        android:id="@+id/editTextPosicion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/posicion"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@id/editTextValor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextEquipo" />
+
+    <!-- VALOR -->
+    <EditText
+        android:id="@+id/editTextValor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/valor"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@id/textViewEdad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPosicion" />
+
+    <!-- EDAD -->
+    <TextView
+        android:id="@+id/textViewEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="@string/edad_16"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/seekBarEdad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextValor"
+
+        />
+
+    <SeekBar
+        android:id="@+id/seekBarEdad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="50"
+        android:min="16"
+        android:progress="0"
+        app:layout_constraintBottom_toTopOf="@id/botonAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewEdad" />
+
+    <!-- BOTON UPDATE -->
+    <Button
+        android:id="@+id/botonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonDelete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBarEdad" />
+
+
+    <!-- BOTON DELETE -->
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="@id/botonAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/botonAdd"
+        app:layout_constraintTop_toTopOf="@id/botonAdd" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentListado">
+
+    <fragment
+        android:id="@+id/fragmentListado"
+        android:name="com.example.crudjugadores.ui.pantallaLista.FragmentListado"
+        android:label="fragment_listado"
+        tools:layout="@layout/fragment_listado" >
+        <action
+            android:id="@+id/action_fragmentListado_to_fragmentUpdate"
+            app:destination="@id/fragmentUpdate" />
+        <action
+            android:id="@+id/action_fragmentListado_to_fragmentAnadir"
+            app:destination="@id/fragmentAnadir" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAnadir"
+        android:name="com.example.crudjugadores.ui.pantallaAdd.FragmentAnadir"
+        android:label="fragment_anadir"
+        tools:layout="@layout/fragment_anadir" >
+        <action
+            android:id="@+id/action_fragmentAnadir_to_fragmentListado"
+            app:destination="@id/fragmentListado" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentUpdate"
+        android:name="com.example.crudjugadores.ui.pantallaUpdate.FragmentUpdate"
+        android:label="fragment_update"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_fragmentUpdate_to_fragmentListado"
+            app:destination="@id/fragmentListado" />
+        <argument
+            android:name="idJugador"
+            app:argType="integer" />
+    </fragment>
+</navigation>

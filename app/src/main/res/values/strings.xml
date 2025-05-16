@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">CRUDjugadores</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nombre">Nombre</string>
+    <string name="equipo">Equipo</string>
+    <string name="posicion">Posición</string>
+    <string name="valor">Valor</string>
+    <string name="edad_16">Edad: 16</string>
+    <string name="delete">DELETE</string>
+    <string name="update">UPDATE</string>
+    <string name="edad">Edad</string>
+    <string name="anadir_jugador">Añadir jugador</string>
 </resources>
